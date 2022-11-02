@@ -8,7 +8,7 @@ package Modelos;
  *
  * @author Familia
  */
-public class Encargado extends Entidad{
+public class Encargado extends Entidad {
     
     private String area;
     private String cargo;

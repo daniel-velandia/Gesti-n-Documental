@@ -17,10 +17,10 @@ public class Documento {
     private Date fecha;
     private String numRadicado;
     private boolean tipoRadicado;
+    private int tipoDocumento;
     private String asunto;
     private String anexos;
     private boolean reqRespuesta;
-    private ClaseDocumento claseDocumento;
     private int remitenteId;
     private int encargadoId;
     private int respuestaId;
@@ -28,16 +28,16 @@ public class Documento {
     public Documento() {
     }
 
-    public Documento(int id, byte[] archivoPdf, Date fecha, String numRadicado, boolean tipoRadicado, String asunto, String anexos, boolean reqRespuesta, ClaseDocumento claseDocumento, int remitenteId, int encargadoId, int respuestaId) {
+    public Documento(int id, byte[] archivoPdf, Date fecha, String numRadicado, boolean tipoRadicado, int tipoDocumento, String asunto, String anexos, boolean reqRespuesta, int remitenteId, int encargadoId, int respuestaId) {
         this.id = id;
         this.archivoPdf = archivoPdf;
         this.fecha = fecha;
         this.numRadicado = numRadicado;
         this.tipoRadicado = tipoRadicado;
+        this.tipoDocumento = tipoDocumento;
         this.asunto = asunto;
         this.anexos = anexos;
         this.reqRespuesta = reqRespuesta;
-        this.claseDocumento = claseDocumento;
         this.remitenteId = remitenteId;
         this.encargadoId = encargadoId;
         this.respuestaId = respuestaId;
@@ -114,6 +114,20 @@ public class Documento {
     }
 
     /**
+     * @return the tipoDocumento
+     */
+    public int getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    /**
+     * @param tipoDocumento the tipoDocumento to set
+     */
+    public void setTipoDocumento(int tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    /**
      * @return the asunto
      */
     public String getAsunto() {
@@ -153,20 +167,6 @@ public class Documento {
      */
     public void setReqRespuesta(boolean reqRespuesta) {
         this.reqRespuesta = reqRespuesta;
-    }
-
-    /**
-     * @return the claseDocumento
-     */
-    public ClaseDocumento getClaseDocumento() {
-        return claseDocumento;
-    }
-
-    /**
-     * @param claseDocumento the claseDocumento to set
-     */
-    public void setClaseDocumento(ClaseDocumento claseDocumento) {
-        this.claseDocumento = claseDocumento;
     }
 
     /**
@@ -210,6 +210,6 @@ public class Documento {
     public void setRespuestaId(int respuestaId) {
         this.respuestaId = respuestaId;
     }
-    
+
     
 }

@@ -8,7 +8,7 @@ package Modelos;
  *
  * @author Familia
  */
-public class Compania extends Entidad{
+public class Compania extends Entidad {
     
     private String nombreCompañia;
     private String nit;
