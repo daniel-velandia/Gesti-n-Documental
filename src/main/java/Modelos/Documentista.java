@@ -19,6 +19,14 @@ public class Documentista {
 
     public Documentista() {
     }
+    
+    public Documentista(String documento, String nombres, String apellidos, String Correo, String telefono) {
+        this.documento = documento;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.Correo = Correo;
+        this.telefono = telefono;
+    }
 
     public Documentista(int id, String documento, String nombres, String apellidos, String Correo, String telefono) {
         this.id = id;

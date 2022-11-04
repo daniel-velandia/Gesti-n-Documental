@@ -11,12 +11,18 @@ package Modelos;
 public class Estudiante extends Entidad {
     
     private int carrera;
-    private String semestre;
+    private int semestre;
 
     public Estudiante() {
     }
+    
+    public Estudiante(int carrera, int semestre, String documento, String nombres, String apellidos, String Correo, String telefono) {
+        super(documento, nombres, apellidos, Correo, telefono);
+        this.carrera = carrera;
+        this.semestre = semestre;
+    }
 
-    public Estudiante(int carrera, String semestre, int id, String documento, String nombres, String apellidos, String Correo, String telefono) {
+    public Estudiante(int carrera, int semestre, int id, String documento, String nombres, String apellidos, String Correo, String telefono) {
         super(id, documento, nombres, apellidos, Correo, telefono);
         this.carrera = carrera;
         this.semestre = semestre;
@@ -39,14 +45,14 @@ public class Estudiante extends Entidad {
     /**
      * @return the semestre
      */
-    public String getSemestre() {
+    public int getSemestre() {
         return semestre;
     }
 
     /**
      * @param semestre the semestre to set
      */
-    public void setSemestre(String semestre) {
+    public void setSemestre(int semestre) {
         this.semestre = semestre;
     }
 

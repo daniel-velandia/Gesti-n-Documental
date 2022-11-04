@@ -16,6 +16,12 @@ public class Compania extends Entidad {
     public Compania() {
     }
 
+    public Compania(String nombreCompañia, String nit, String documento, String nombres, String apellidos, String Correo, String telefono) {
+        super(documento, nombres, apellidos, Correo, telefono);
+        this.nombreCompañia = nombreCompañia;
+        this.nit = nit;
+    }
+    
     public Compania(String nombreCompañia, String nit, int id, String documento, String nombres, String apellidos, String Correo, String telefono) {
         super(id, documento, nombres, apellidos, Correo, telefono);
         this.nombreCompañia = nombreCompañia;

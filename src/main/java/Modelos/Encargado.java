@@ -15,6 +15,12 @@ public class Encargado extends Entidad {
 
     public Encargado() {
     }
+    
+    public Encargado(String area, String cargo, String documento, String nombres, String apellidos, String Correo, String telefono) {
+        super(documento, nombres, apellidos, Correo, telefono);
+        this.area = area;
+        this.cargo = cargo;
+    }
 
     public Encargado(String area, String cargo, int id, String documento, String nombres, String apellidos, String Correo, String telefono) {
         super(id, documento, nombres, apellidos, Correo, telefono);

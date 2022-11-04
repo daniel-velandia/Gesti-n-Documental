@@ -13,6 +13,7 @@ import java.sql.Date;
 public class Documento {
     
     private int id;
+    private String nombreArchivo;
     private byte[] archivoPdf;
     private Date fecha;
     private String numRadicado;
@@ -27,9 +28,24 @@ public class Documento {
 
     public Documento() {
     }
+    
+    public Documento(byte[] archivoPdf, Date fecha, String numRadicado, boolean tipoRadicado, int tipoDocumento, String asunto, String anexos, boolean reqRespuesta, int remitenteId, int encargadoId, int respuestaId) {
+        this.archivoPdf = archivoPdf;
+        this.fecha = fecha;
+        this.numRadicado = numRadicado;
+        this.tipoRadicado = tipoRadicado;
+        this.tipoDocumento = tipoDocumento;
+        this.asunto = asunto;
+        this.anexos = anexos;
+        this.reqRespuesta = reqRespuesta;
+        this.remitenteId = remitenteId;
+        this.encargadoId = encargadoId;
+        this.respuestaId = respuestaId;
+    }
 
-    public Documento(int id, byte[] archivoPdf, Date fecha, String numRadicado, boolean tipoRadicado, int tipoDocumento, String asunto, String anexos, boolean reqRespuesta, int remitenteId, int encargadoId, int respuestaId) {
+    public Documento(int id, String nombreArchivo, byte[] archivoPdf, Date fecha, String numRadicado, boolean tipoRadicado, int tipoDocumento, String asunto, String anexos, boolean reqRespuesta, int remitenteId, int encargadoId, int respuestaId) {
         this.id = id;
+        this.nombreArchivo = nombreArchivo;
         this.archivoPdf = archivoPdf;
         this.fecha = fecha;
         this.numRadicado = numRadicado;
@@ -209,6 +225,20 @@ public class Documento {
      */
     public void setRespuestaId(int respuestaId) {
         this.respuestaId = respuestaId;
+    }
+
+    /**
+     * @return the nombreArchivo
+     */
+    public String getNombreArchivo() {
+        return nombreArchivo;
+    }
+
+    /**
+     * @param nombreArchivo the nombreArchivo to set
+     */
+    public void setNombreArchivo(String nombreArchivo) {
+        this.nombreArchivo = nombreArchivo;
     }
 
     
